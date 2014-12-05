@@ -1,0 +1,13 @@
+<div class="row language">
+  <div class="col-sm-2" in-view-animate="animated fadeInLeft" offset="30">
+    <img ng-src="images/Techs/{{thumbnail}}" alt="" tooltip-placement="top" tooltip="{{language}}">
+  </div>
+  <div class="col-sm-10 progress-wrapper">
+    <div class="progress">
+      <div class="progress-bar" style="width: {{rate}}%;"
+            ng-class="levelColor">
+        {{level}}
+      </div>
+    </div>  
+  </div>
+</div>

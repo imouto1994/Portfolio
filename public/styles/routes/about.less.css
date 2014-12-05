@@ -1,0 +1,211 @@
+@mobile: ~"only screen and (max-width: 768px)";
+@tablet: ~"only screen and (max-width: 992px)";
+
+.main-view.about {
+  .biography {
+    margin: 4em 0;
+    .bio-ava {
+      text-align: center;
+
+      @media @tablet {
+        margin-bottom: 1em;
+      }
+      margin-right: 1em;
+      .round-border {
+        border: 2px solid #fff;  
+        max-height: 180px;
+      }
+    }
+
+    .bio-infos {
+      padding: 1.5em 1.0em;
+      background: #fff;
+      color: rgb(100, 100, 100);
+      border-radius: 2px;
+      font-weight: 400;
+      font-size: 1.25em;
+      
+      &::before {
+        position: absolute;
+        content: ' ';
+        display: inline-block;
+        border-top: 10px solid transparent;
+        border-right: 10px solid #fff;
+        border-bottom: 10px solid transparent;
+        border-left: 0px solid transparent;
+        top: 45%;
+        left: -10px;
+      }
+      
+      @media @tablet {
+        &::before {
+          border-left: 10px solid transparent;
+          border-bottom: 10px solid #fff;
+          border-right: 10px solid transparent;
+          border-top: 0px solid transparent;
+          top: -10px;
+          left: 47%;
+        }
+      }
+
+      @media @mobile {
+        font-size: 1.0em;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .education, .work-experiences, .skills {
+    padding: 1.5em 4em 4em;
+    font-family: 'Quicksand';
+    font-weight: 500;
+    font-size: 1.25em;
+
+    h1 {
+      font-weight: 500;
+      font-size: 2.25em;
+
+      &:before {
+        font-size: 0.75em;
+        vertical-align: baseline;
+      }
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+
+    @media @tablet {
+      padding: 2em 2em;
+    }
+
+    @media @mobile {
+      font-size: 1.0em;
+    }
+  }
+
+  .education {
+    background: #fff;
+    color: rgb(100, 100, 100);
+    
+    .achievements {
+      background: rgb(240, 240, 240);
+      color: rgb(125, 125, 125);
+      font-family: 'Lato';
+      letter-spacing: 1.15px;
+      word-spacing: 0.5px;
+      border-left: 6px solid #22A7F0;
+      margin-top: 20px;
+      padding-bottom: 25px;
+      
+      h2 {
+        color: #4183D7;
+      }
+
+      >ul >li {
+        font-size: 1.0em;
+        font-weight: 300;
+      }
+    }
+
+    @media @tablet {
+      .achievements {
+        padding-top: 2px;
+        padding-bottom: 7px;
+        border-width: 4px;  
+      }
+    }
+  }
+
+  .work-experiences {
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .label {
+      display: inline-block;
+      margin: 0 3px;
+      background: #fff;
+      color: #4183D7;
+    }
+
+    .period {
+      margin-top: 10px;
+    }
+    
+    a {
+      color: #F9BF3B;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #F89406;
+    }
+  }
+
+  .skills {
+    padding-bottom: 0em;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: #fff;
+    color: rgb(100, 100, 100);
+    
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    .youn-thumbnail {
+      max-height: 225px;
+      transition: transform 0.35s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .competencies {
+      margin-bottom: 7em;
+    }
+
+    .language {
+      text-align: center;
+      margin: 20px 0;
+
+      img {
+        max-height: 100px;
+        transition: transform 0.35s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .progress-wrapper {
+        padding-top: 30px;
+        font-family: Raleway;
+        font-weight: 500;
+      }
+    }
+
+    .next-route {
+      margin-top: 2em;
+
+      .next-button {
+        background: #26C281;
+        border: 2px solid transparent;
+
+        &:hover {
+          &:after {
+            color: #26C281;
+          }
+          
+          color: #26C281;
+          border: 2px solid rgb(150, 150, 150);
+          background: #fff;
+        }
+      }
+    }
+  }
+}

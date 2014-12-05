@@ -1,0 +1,80 @@
+<!-- Biography Section -->
+<section class="row biography">
+ <div class="col-xs-offset-4 col-xs-4 col-md-offset-2 col-md-2 bio-ava">
+  <img  youn-animate="animated fadeInLeft" delay="500" 
+        class="round-border" src="images/avatar.png" alt="">
+ </div>
+ <div youn-animate="animated fadeInDown" delay="500"
+      class="col-xs-offset-2 col-xs-8 col-md-offset-0 col-md-6 bio-infos">
+    {{bio.intro}}
+ </div>  
+</section>
+
+<!-- Education Section -->
+<section class="row education">
+  <h1 class="icon-before icon-before-library">Education</h1>
+  <div>
+    <div class="university col-md-6">
+      <h2>{{edu.uni}}</h2>
+      <p><i>{{edu.startYear}} - {{edu.endYear}} (Expected)</i></p>
+      <p><strong>{{edu.course}}</strong></p>
+      <p><strong>{{edu.stream}}</strong></p>
+      <p>CAP: <strong>{{edu.cap}} / 5</strong></p>
+    </div>
+    <div class="achievements col-md-12">
+      <h2>Achievements</h2>
+      <ul>
+        <li ng-repeat="achievement in edu.achievements">
+          <strong>{{achievement.prefix}}</strong> - {{achievement.suffix}} 
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Work Experiences Section -->
+<section class="row work-experiences">
+  <h1 class="icon-before icon-before-keyboard">Work Experiences</h1>
+  <div ng-repeat="workItem in work.workItems">
+    <h2>
+      <a href="{{workItem.ref}}" target="__blank">
+        <strong>{{workItem.name}}</strong>
+      </a>
+    </h2>
+    <p><strong>{{workItem.position}}</strong></p>
+    <p ng-repeat="tech in workItem.techStack" class="label">
+      {{tech}}
+    </p>
+    <p class="period"><i>{{workItem.startTime}} - {{workItem.endTime}}</i></p>
+    <p>{{workItem.description}}</p>
+  </div>
+</section>
+
+<!-- Competentices Section -->
+<section class="skills">
+  <!-- Work Skills -->
+  <div class="row competencies">
+    <h1 class="icon-before icon-before-accessibility">Skills</h1>
+    <div class="col-sm-4 center" ng-repeat="workSkill in skills.workSkills" 
+         in-view-animate="animated fadeInUp" offset="85">
+      <img ng-src="images/Skills/{{workSkill.thumbnailURL}}" class="youn-thumbnail" alt="">
+      <h3>{{workSkill.title}}</h3>
+      <p>{{workSkill.description}}</p>
+    </div>
+  </div>
+
+  <!-- Programming Language Skills -->
+  <h1 class="center">Tech Stacks</h1>
+  <!-- Tech Skills -->
+  <div youn-progress language="{{techSkill.title}}" rate="{{techSkill.rate}}" 
+       thumbnail="{{techSkill.thumbnailURL}}" ng-repeat="techSkill in skills.techSkills">
+  </div>
+  
+  <!-- Next Button -->
+  <div class="next-route center">
+    <a class="youn-button next-button icon-after icon-after-arrow-right3"
+      ng-href="#/{{nextButton.buttonHref}}" ng-click="selectRoute(nextButton.buttonHref)">
+      {{nextButton.buttonTitle}}
+    </a>  
+  </div>
+</section>

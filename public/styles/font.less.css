@@ -1,0 +1,102 @@
+.icon-before:before, .icon-after:after {
+  z-index: 10;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: none;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 1.5em;
+  font-family: 'IcoMoon';
+  speak: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-before:before {
+   margin: 0 0.4em 0 0;
+}
+
+.icon-after:after {
+   margin: 0 0 0 0.4em;
+}
+
+.icon-before-home:before {
+  content: "\e600";
+}
+
+.icon-before-user4:before {
+  content: "\e675";
+}
+
+.icon-before-briefcase:before {
+  content: "\e6a9";
+}
+
+.icon-before-mobile:before {
+  content: "\e654";
+}
+
+.icon-before-library:before {
+  content: "\e621";
+}
+
+.icon-before-keyboard:before {
+  content: "\e651";
+}
+
+.icon-before-accessibility:before {
+  content: "\e6ad";
+}
+
+.icon-before-github:before {
+  content: "\e78a";
+}
+
+.icon-before-facebook:before {
+  content: "\e76a";
+}
+
+.icon-before-google:before {
+  content: "\e766";
+}
+
+.icon-before-twitter:before {
+  content: "\e76e";
+}
+
+.icon-before-youtube:before {
+  content: "\e773";
+}
+
+.icon-before-phone:before {
+  content: "\e63c";
+}
+
+.icon-before-email:before {
+  content: "\e640";
+}
+
+.icon-before-address:before {
+  content: "\e642";
+}
+
+.icon-before-arrow-left2:before {
+  content: "\e72e";
+}
+
+.icon-before-arrow-right2:before {
+  content: "\e72a";
+}
+
+.icon-before-arrow-left3:before {
+  content: "\e736";
+}
+
+.icon-before-arrow-right3:before {
+  content: "\e732";
+}
+
+.icon-after-arrow-right3:after {
+  content: "\e732";
+}

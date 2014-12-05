@@ -1,0 +1,75 @@
+/* Declare Variables */
+@mobile: ~"only screen and (max-width: 768px)";
+
+.main-view.home {
+  text-align: center;
+  overflow: hidden;
+  .header-suffix {
+    font-size: 1.25em;
+
+    &:before {
+      display: inline-block;
+      content: '';
+      height: 1px;
+      width: 100px;
+      background: white;
+      vertical-align: middle;
+      margin-right: 0.5em;
+
+      @media @mobile {
+        width: 60px;
+      }
+    }
+    
+    &:after {
+      display: inline-block;
+      content: '';
+      height: 1px;
+      width: 100px;
+      background: white;
+      vertical-align: middle;
+      margin-left: 0.5em;
+
+      @media @mobile {
+        width: 60px;
+      }
+    }
+
+    @media @mobile {
+      font-size: 1.0em;
+    }
+  }
+
+  .header-title {
+    font-family: Lighthouse;
+    font-weight: 0;
+    font-size: 4em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+
+    @media @mobile {
+      font-size: 3.5em;
+    }
+  }
+
+  .header-description {
+    font-size: 1.35em;
+
+    @media @mobile {
+      font-size: 1.1em;
+    }
+  }
+
+  .next-button {
+    background: #4183D7;
+    border: 2px solid #fff;
+
+    &:hover {
+      &:after {
+        color: #4183D7;
+      }
+      
+      color: #4183D7;
+      background: #fff;
+    }
+  }
+}

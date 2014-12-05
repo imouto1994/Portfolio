@@ -1,0 +1,16 @@
+<div class="image-slides" id="{{slidesId | lowercase}}" in-view="$inview&&loadImages()">
+  <ul>
+    <li ng-class="{'current': $index == currentIndex, 
+                       'prev': $index < currentIndex, 
+                       'next': $index > currentIndex}" 
+        ng-repeat="slide in slides">
+      <img ng-src="images/{{slide}}" alt="">
+    </li>
+  </ul>
+  <div class="transparent-button prev-image-button icon-before icon-before-arrow-left3" 
+        ng-class="{'transparent': currentIndex == 0}" ng-click="currentIndex = currentIndex - 1">
+  </div>
+  <div class="transparent-button next-image-button icon-before icon-before-arrow-right3" 
+        ng-class="{'transparent': currentIndex == slides.length - 1}" ng-click="currentIndex = currentIndex + 1">
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<a ng-href="{{mapRef}}" target="__blank" youn-animate="animated bounceInDown" delay="250">
+  <img class="address-icon" src="images/addressIcon.png" alt="">
+</a>
+<div class="social-links" youn-animate="animated bounceInLeft" delay="350">
+  <a ng-href="{{socialLink.ref}}" class="social-link icon-before icon-before-{{socialLink.name}}" 
+      ng-repeat="socialLink in socialLinks" target="__blank">
+  </a>
+</div>
+<div class="contact-block" youn-animate="animated bounceInRight" delay="450">
+  <p ng-repeat="contact in contacts" class="icon-before icon-before-{{contact.name}}">
+    {{contact.content}}
+  </p>
+</div>

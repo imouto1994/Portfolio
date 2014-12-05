@@ -1,0 +1,16 @@
+<img  src="images/YounLogo.png" alt="" width="250" height="250" 
+      youn-animate="animated bounceIn" delay="250">
+<div class="header-suffix" youn-animate="animated bounceIn" delay="350">
+  a special edition from
+</div>
+<h1 class="header-title" youn-animate="animated bounceInLeft" delay="450">
+  {{info.header}}
+</h1>
+<p class="header-description" youn-animate="animated bounceInRight" delay="550">
+  {{info.description}}
+</p>
+<a  class="youn-button next-button icon-after icon-after-arrow-right3"
+    youn-animate="animated bounceInUp" delay="650" ng-href="#/{{info.buttonHref}}" 
+    ng-click="selectRoute(info.buttonHref)">
+  {{info.buttonTitle}}
+</a>

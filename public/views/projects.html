@@ -1,0 +1,22 @@
+<div class="row project" ng-class-odd="'alternate-section'" ng-repeat="project in projects">
+  <div>
+    <h1>
+      {{project.title}}
+      <a ng-href="{{link.ref}}" class="icon-before {{refIcons[link.title]}}" 
+          ng-class="{first: $first}"
+          ng-repeat="link in project.links" target="__blank">
+      </a>
+    </h1>
+    <p ng-repeat="tag in project.tags" class="label">
+      {{tag}}
+    </p>
+    <p class="description">{{project.description}}</p>
+  </div>
+  <div image-slides="project.images" slides-id="{{project.title}}"></div>
+</div>
+<div class="center">
+  <a class="youn-button next-button icon-after icon-after-arrow-right3"
+      ng-href="#/contacts" ng-click="selectRoute('contacts')">
+    Contact Me
+  </a>
+</div>

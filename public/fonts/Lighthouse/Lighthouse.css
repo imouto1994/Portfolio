@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Lighthouse';
+    src: url('lighthouse_personaluse-webfont.eot');
+    src: url('lighthouse_personaluse-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lighthouse_personaluse-webfont.woff2') format('woff2'),
+         url('lighthouse_personaluse-webfont.woff') format('woff'),
+         url('lighthouse_personaluse-webfont.ttf') format('truetype'),
+         url('lighthouse_personaluse-webfont.svg#lighthouse_personal_useRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
